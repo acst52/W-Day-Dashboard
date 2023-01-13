@@ -10,34 +10,25 @@
 
         <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
         <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
     </head>
     <body>
-        <!-- the following is the div that contains the Quote API: -->
-            <div id="quoteApp"></div>
-            <br />
-<!-- Modal to capture user input for love calculator: -->
-<button id="open-modal-btn">Is your love a match?!</button>
-<div id="love-calculator-modal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <form>
-        <label for="name1input">Your Name:</label>
-        <input type="text" id="name1input" name="name1input" required>
-        <br>
-        <label for="name2input">Partner's Name:</label>
-        <input type="text" id="name2input" name="name2input" required>
-        <br>
-        <button type="submit" id="submit-btn">Calculate</button>
-      </form>
-    </div>
-  </div>
-  
-  <!-- Div that displays love percentage: -->
-  <div id="modal-content"></div>
-  
-            <br />
-        <!-- the following are fields used to create the create-task, daily-tasks and to-do list sections: -->
-            <div id="formContainer">
+        
+    <main>
+        <div class=" grid grid-cols-2 gap-2">
+
+            <div id="quoteApp" class="col-span-2"></div>
+
+            <section id="mood" class="">
+                <h1>Mood</h1>
+            </section>
+
+            <section id="movies">
+                <h1>API 2</h1>
+            </section>
+
+            <section id="daily-tasks" class="col-span-2">
+                <div id="formContainer">
                 <form id="taskForm">
                     <h2>Create a Task: </h2>
                     <!-- <br /> -->
@@ -93,6 +84,11 @@
                     </style>
                 <!-- end of nested confetti code -->
             </fieldset>
+            </section>
+
+        </div>
+
+    </main>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
