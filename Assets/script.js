@@ -40,66 +40,66 @@ generateRandomQuote();
     // Must use a modal (modal pops up when you hit button?) for user input AND validate user input (make sure it is text only = names)
 
 // first let's define a few variables:
-let openModalBtn = document.getElementById("open-modal-btn");
-let closeBtn = document.getElementsByClassName("close")[0];
-let modal = document.getElementsByClassName("modal");
+// let openModalBtn = document.getElementById("open-modal-btn");
+// let closeBtn = document.getElementsByClassName("close")[0];
+// let modal = document.getElementsByClassName("modal");
 
-// When the user clicks the button, open the modal:
-openModalBtn.onclick = function() {
-    modal.style.display = "block";
-  }
+// // When the user clicks the button, open the modal:
+// openModalBtn.onclick = function() {
+//     modal.style.display = "block";
+//   }
 
-// When the user clicks on the close button, close the modal:
-closeBtn.onclick = function() {
-    modal.style.display = "none";
-  }
+// // When the user clicks on the close button, close the modal:
+// closeBtn.onclick = function() {
+//     modal.style.display = "none";
+//   }
 
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  }
+// // When the user clicks anywhere outside of the modal, close it
+// window.onclick = function(event) {
+//     if (event.target == modal) {
+//       modal.style.display = "none";
+//     }
+//   }
 
-// add an event listener for the love button click:
-openModalBtn.addEventListener("click", function(){
-    modal.style.display = "block";
-});
+// // add an event listener for the love button click:
+// openModalBtn.addEventListener("click", function(){
+//     modal.style.display = "block";
+// });
 
-document.getElementById("submit-btn").addEventListener("click", function(event){
-    event.preventDefault()});
+// document.getElementById("submit-btn").addEventListener("click", function(event){
+//     event.preventDefault()});
 
-const optionsLove = {
-	method: 'GET',
-	headers: {
-		'X-RapidAPI-Key': '1aad9b257amsh8cea256130839a7p1e5326jsn1feba12d1c03',
-		'X-RapidAPI-Host': 'love-calculator.p.rapidapi.com'
-	}
-};
+// const optionsLove = {
+// 	method: 'GET',
+// 	headers: {
+// 		'X-RapidAPI-Key': '1aad9b257amsh8cea256130839a7p1e5326jsn1feba12d1c03',
+// 		'X-RapidAPI-Host': 'love-calculator.p.rapidapi.com'
+// 	}
+// };
 
-const loveCalc = document.getElementById('loveCalc');
+// const loveCalc = document.getElementById('loveCalc');
 
-function generateLoveCalc() {
-    // need to first click button to open modal
-    // then ask users for their first name + partner name
-    // then validate their input to make sure there is at least 1 letter in each box
-    // then remove any spaces from user input,
-    // THEN these 2 names need to appear below, or maybe the API spits them back out - unsure - 
-            // with the % + result sentence. Maybe a heart icon btwn the names
-let name1 = document.getElementById('name1input').value;
-let name2 = document.getElementById('name2input').value;
-fetch('https://love-calculator.p.rapidapi.com/getPercentage?sname=${name1}&fname=${name2}', optionsLove)
-    .then(response => response.json())
-    .then(data => {   // Update modal content with data from API
-        document.getElementById('modal-content').innerHTML = `Love percentage between ${name1} and ${name2} is ${data.percentage}%`;
-      })
-      .catch(error => console.error(error));
-    };
+// function generateLoveCalc() {
+//     // need to first click button to open modal
+//     // then ask users for their first name + partner name
+//     // then validate their input to make sure there is at least 1 letter in each box
+//     // then remove any spaces from user input,
+//     // THEN these 2 names need to appear below, or maybe the API spits them back out - unsure - 
+//             // with the % + result sentence. Maybe a heart icon btwn the names
+// let name1 = document.getElementById('name1input').value;
+// let name2 = document.getElementById('name2input').value;
+// fetch('https://love-calculator.p.rapidapi.com/getPercentage?sname=${name1}&fname=${name2}', optionsLove)
+//     .then(response => response.json())
+//     .then(data => {   // Update modal content with data from API
+//         document.getElementById('modal-content').innerHTML = `Love percentage between ${name1} and ${name2} is ${data.percentage}%`;
+//       })
+//       .catch(error => console.error(error));
+//     };
 
 
 
-// Let's call the LoveCalc API function:
-generateLoveCalc();
+// // Let's call the LoveCalc API function:
+// generateLoveCalc();
 
 // END OF LOVE CALC API CODE
 
