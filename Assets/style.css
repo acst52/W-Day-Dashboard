@@ -7,59 +7,114 @@ body {
     background-color: rgb(75, 75, 75);
 }
 
-@keyframes fall {
-    from {
-        transform: translateY(-10px);
-    }
-    to {
-        transform: translateY(100vh);
-    }
+* {
+    margin: 0px;
+    padding: 3px;
 }
-
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  
-  /* Modal Content */
-  .modal-content {
-    background-color: #fefefe;
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%; /* Could be more or less, depending on screen size */
-  }
-  
-  /* The Close Button */
-  .close {color: red;}
-
 
 /* @import url('Google font URL here'); */
 
-/* header {
 
-} */
+body{
+    background-color: rgb(165, 165, 141);
 
-/* body {
+}
 
-} */
-
-
-
-/* div {
+section{
     
-} */
+    
+    background-color: rgb(255, 241, 230);
+}
+
+#welcome-message{
+    text-align: center;
+    padding-top: 15px;     
+}
 
 
+#quoteApp{
+    text-align: center;
+    padding-top: 15px;   
+}
+
+#mood{
+    height:250px;
+}
+
+#movies{
+  
+}
+
+#daily-tasks{
+   height: 300px;
+   
+}
+
+@media screen and (min-width: 640px) {
+    
+    
+    
+
+   
+
+    #welcome-message2{
+        display: flex;
+        height: 50px;
+        margin: 0px 20px 0px 20px;
+        background-color: rgb(255, 241, 230);
+        text-align: center;
+        padding-top: 15px; 
+    }
+    
+    .flex-row2{
+        display: flex;
+        
+    }
+
+    #column-one{
+        width: 30%;
+    }
+
+    #column-two{
+        width: 70%;
+        
+        
+    }
+    
+    #quoteApp2{
+        display:block;
+        height: 50px;
+       
+        background-color: rgb(255, 241, 230);
+        text-align: center;
+        padding-top: 15px;
+    }
+    
+    #mood2{
+        display: block;
+        height: 300px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        flex-grow: 1;
+    }
+    
+    #horoscope2{
+        display:block;
+        height: 300px;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        flex-grow: 2;
+        margin-left: 20px;
+    }
+    
+    #daily-tasks2{
+        display:block;
+        height: 670px;
+        margin-bottom: 20px;
+        
+           
+    }
+}
 
 /* @media screen and (max-width: 750px) {
 
