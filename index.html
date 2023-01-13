@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Day Dashboard</title>
+        <link rel="stylesheet" href="./assets/reset.css" />
+        <link rel="stylesheet" href="./assets/style.css" />
+
+        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    </head>
+    <body>
+        <!-- the following is the div that contains the Quote API: -->
+            <div id="quoteApp"></div>
+            <br />
+<!-- Modal to capture user input for love calculator: -->
+<button id="open-modal-btn">Is your love a match?!</button>
+<div id="love-calculator-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <form>
+        <label for="name1input">Your Name:</label>
+        <input type="text" id="name1input" name="name1input" required>
+        <br>
+        <label for="name2input">Partner's Name:</label>
+        <input type="text" id="name2input" name="name2input" required>
+        <br>
+        <button type="submit" id="submit-btn">Calculate</button>
+      </form>
+    </div>
+  </div>
+  
+  <!-- Div that displays love percentage: -->
+  <div id="modal-content"></div>
+  
+            <br />
+        <!-- the following are fields used to create the create-task, daily-tasks and to-do list sections: -->
+            <div id="formContainer">
+                <form id="taskForm">
+                    <h2>Create a Task: </h2>
+                    <!-- <br /> -->
+                    <input type="text" id="taskInput" />
+                    <button type="submit" id="taskBtn">Create Task</button>
+                </form>
+                <br />
+            </div>
+            <h2>Daily Tasks</h2>
+            <fieldset id="toDoField">
+                <legend>To-do List: </legend>
+                <!-- nested confetti code: -->
+                <div id="confetti-container"></div>
+                    <style>
+                        /* styles for the confetti elements */
+                            .confetti {
+                            width: 10px;
+                            height: 10px;
+                            /* background-color: red; */
+                            border-radius: 100%;
+                            position: absolute;
+                            top: -10px;
+                            }
+
+                            .red {
+                                background-color: rgb(255, 0, 0);
+                            }
+
+                            .green {
+                                background-color: rgb(9, 149, 9);
+                            }
+
+                            .blue {
+                                background-color: rgb(21, 21, 251);
+                            }
+
+                            .yellow {
+                                background-color: yellow;
+                            }
+
+                            .orange {
+                                background-color: orange;
+                            }
+
+                            .purple {
+                                background-color: blueviolet;
+                            }
+
+                            .pink {
+                                background-color: rgb(255, 75, 198);
+                            }
+
+                    </style>
+                <!-- end of nested confetti code -->
+            </fieldset>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+        integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+        crossorigin="anonymous"></script>
+    <script src="./assets/script.js"></script>
+
+    </body>
+</html>
